@@ -1,0 +1,88 @@
+html, body {
+    height: 100%; /* Ensure body takes full viewport height */
+    margin: 0;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    min-height: 100vh; /* Ensure body is at least viewport height */
+}
+
+/* Remove the old body margin */
+/* margin: 20px; */
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin: 0; /* Remove default margin */
+}
+
+/* Header Styling */
+.page-header {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+    flex-shrink: 0; /* Prevent header from shrinking */
+}
+
+/* Main Content Area Styling */
+.page-main {
+    flex-grow: 1; /* Allow main content to grow and fill space */
+    padding: 20px;
+}
+
+.page-main h2 {
+    text-align: center;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Footer Styling */
+.page-footer {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    flex-shrink: 0; /* Prevent footer from shrinking */
+}
+
+/* === Existing Flexbox Item Styles === */
+
+.flex-container {
+    display: flex; /* Establishes a flex context */
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
+    padding: 10px;
+    background-color: lightgray;
+    border: 1px solid #ccc;
+}
+
+.flex-item {
+    background-color: dodgerblue;
+    color: white;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    flex-grow: 1; /* Allows items to grow to fill available space */
+    flex-basis: 150px; /* Sets the initial size of the items */
+
+    /* Basic styling */
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Example of a media query for further responsiveness adjustments */
+@media (max-width: 600px) {
+    .flex-item {
+        /* On smaller screens, let items take more width */
+        flex-basis: calc(50% - 20px); /* 50% width minus margins */
+    }
+}
+
+@media (max-width: 400px) {
+    .flex-item {
+        /* On very small screens, let items take full width */
+        flex-basis: calc(100% - 20px); /* 100% width minus margins */
+    }
+} 

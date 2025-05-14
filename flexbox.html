@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Responsive Layout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+body {
+    font-family: sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.flex-container {
+    display: flex; /* Establishes a flex context */
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
+    padding: 10px;
+    background-color: lightgray;
+    border: 1px solid #ccc;
+}
+
+.flex-item {
+    background-color: dodgerblue;
+    color: white;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    flex-grow: 1; /* Allows items to grow to fill available space */
+    flex-basis: 150px; /* Sets the initial size of the items */
+
+    /* Basic styling */
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Example of a media query for further responsiveness adjustments */
+@media (max-width: 600px) {
+    .flex-item {
+        /* On smaller screens, let items take more width */
+        flex-basis: calc(50% - 20px); /* 50% width minus margins */
+    }
+}
+
+@media (max-width: 400px) {
+    .flex-item {
+        /* On very small screens, let items take full width */
+        flex-basis: calc(100% - 20px); /* 100% width minus margins */
+    }
+}
+</style>
+<body>
+
+    <h1>Flexbox Responsive Layout Example</h1>
+
+    <div class="flex-container">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+        <div class="flex-item">Item 4</div>
+        <div class="flex-item">Item 5</div>
+        <div class="flex-item">Item 6</div>
+    </div>
+
+</body>
+</html>
