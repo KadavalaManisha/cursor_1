@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habit Tracker - Build Better Habits</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .habit-card {
+            transition: transform 0.2s;
+        }
+        .habit-card:hover {
+            transform: translateY(-5px);
+        }
+        .progress-ring {
+            transition: stroke-dashoffset 0.35s;
+            transform: rotate(-90deg);
+            transform-origin: 50% 50%;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold text-indigo-600">HabitTracker</h1>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button class="text-gray-600 hover:text-indigo-600">Dashboard</button>
+                    <button class="text-gray-600 hover:text-indigo-600">Statistics</button>
+                    <button class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700">Sign In</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="gradient-bg text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold mb-4">Transform Your Life Through Better Habits</h2>
+            <p class="text-xl mb-8">Track, build, and maintain habits that lead to success</p>
+            <button class="bg-white text-indigo-600 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-gray-100">
+                Start Your Journey
+            </button>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Feature 1 -->
+            <div class="habit-card bg-white p-6 rounded-xl shadow-md">
+                <div class="text-indigo-600 text-3xl mb-4">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Track Progress</h3>
+                <p class="text-gray-600">Monitor your daily habits and see your improvement over time</p>
+            </div>
+            <!-- Feature 2 -->
+            <div class="habit-card bg-white p-6 rounded-xl shadow-md">
+                <div class="text-indigo-600 text-3xl mb-4">
+                    <i class="fas fa-fire"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Build Streaks</h3>
+                <p class="text-gray-600">Maintain your momentum with streak tracking and rewards</p>
+            </div>
+            <!-- Feature 3 -->
+            <div class="habit-card bg-white p-6 rounded-xl shadow-md">
+                <div class="text-indigo-600 text-3xl mb-4">
+                    <i class="fas fa-bell"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Smart Reminders</h3>
+                <p class="text-gray-600">Get timely notifications to stay on track with your goals</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Habit Tracking Section -->
+    <div class="bg-gray-100 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">Your Daily Habits</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Sample Habit Cards -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-lg font-semibold">Morning Exercise</h3>
+                        <span class="text-green-500">7 day streak</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                        <div class="bg-indigo-600 h-2.5 rounded-full" style="width: 70%"></div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-lg font-semibold">Reading</h3>
+                        <span class="text-green-500">5 day streak</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                        <div class="bg-indigo-600 h-2.5 rounded-full" style="width: 50%"></div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-lg font-semibold">Meditation</h3>
+                        <span class="text-green-500">3 day streak</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                        <div class="bg-indigo-600 h-2.5 rounded-full" style="width: 30%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="bg-indigo-600 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-4">Ready to Transform Your Habits?</h2>
+            <p class="text-xl mb-8">Join thousands of people who are building better habits every day</p>
+            <button class="bg-white text-indigo-600 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-gray-100">
+                Get Started Free
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">HabitTracker</h3>
+                    <p class="text-gray-400">Build better habits, achieve your goals</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Features</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Habit Tracking</li>
+                        <li>Progress Analytics</li>
+                        <li>Reminders</li>
+                        <li>Community</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Blog</li>
+                        <li>Help Center</li>
+                        <li>Guides</li>
+                        <li>Support</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 HabitTracker. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Add interactivity for habit cards
+        document.querySelectorAll('.habit-card').forEach(card => {
+            card.addEventListener('click', () => {
+                // Add your habit tracking logic here
+                console.log('Habit card clicked');
+            });
+        });
+    </script>
+</body>
+</html> 
